@@ -1,0 +1,12 @@
+zone "jflores.edu" {
+    type slave;
+    file "db.jflores.edu";
+    masters { 10.19.106.1; }; 
+};
+
+zone "106.19.10.in-addr.arpa" {
+    type slave;
+    file "db.106.19.10";
+    masters { 10.106.19.1; }; 
+};
+

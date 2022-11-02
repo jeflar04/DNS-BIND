@@ -1,0 +1,11 @@
+zone "jflores.edu" {
+    type master;
+    file "/etc/bind/zones/db.jflores.edu"; 
+    allow-transfer { 10.19.106.2; };     
+};
+
+zone "106.19.10.in-addr.arpa" {
+    type master;
+    file "/etc/bind/zones/db.106.19.10";  
+    allow-transfer { 10.19.106.2; };  
+};

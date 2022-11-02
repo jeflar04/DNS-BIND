@@ -1,0 +1,26 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	s1.jflores.edu. admin.jflores.edu. (
+			      3		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	localhost.
+@	IN	A	127.0.0.1
+@	IN	AAAA	::1
+
+; name servers - NS records
+   IN       NS      s1.jflores.edu.
+   IN	    NS      s2.jflores.edu.
+
+; name servers - A records
+s1.jflores.edu.        IN      A      10.19.106.1
+s2.jflores.edu.        IN      A      10.19.106.2
+
+; 10.19.106.0/24 - A records
+client1.jflores.edu.        IN      A      10.19.106.50
+
